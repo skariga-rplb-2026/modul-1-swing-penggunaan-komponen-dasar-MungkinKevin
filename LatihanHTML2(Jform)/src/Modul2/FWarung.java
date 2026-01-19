@@ -27,6 +27,7 @@ public class FWarung extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        CaraBayar = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         chkSoto = new javax.swing.JCheckBox();
         chkSate = new javax.swing.JCheckBox();
@@ -42,10 +43,10 @@ public class FWarung extends javax.swing.JFrame {
         txtSate = new javax.swing.JTextField();
         txtEsJeruk = new javax.swing.JTextField();
         txtEsTeh = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        btnHitung = new javax.swing.JButton();
+        lblCaraBayar = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnKosong = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +72,7 @@ public class FWarung extends javax.swing.JFrame {
 
         jLabel2.setText("Cara Bayar:");
 
+        CaraBayar.add(jRadioButton1);
         jRadioButton1.setText("Cash");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,8 +80,10 @@ public class FWarung extends javax.swing.JFrame {
             }
         });
 
+        CaraBayar.add(jRadioButton2);
         jRadioButton2.setText("BCA Card");
 
+        CaraBayar.add(jRadioButton3);
         jRadioButton3.setText("Mandiri Card");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,15 +138,15 @@ public class FWarung extends javax.swing.JFrame {
         txtEsTeh.setText("0");
         txtEsTeh.setEnabled(false);
 
-        jButton1.setText("Hitung");
+        btnHitung.setText("Hitung");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Uang Cash");
+        lblCaraBayar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblCaraBayar.setText("Uang Cash");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Total: Rp.o");
 
-        jButton2.setText("Kosongkan");
+        btnKosong.setText("Kosongkan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,9 +168,9 @@ public class FWarung extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCaraBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2))
+                                .addComponent(btnKosong))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -179,7 +183,7 @@ public class FWarung extends javax.swing.JFrame {
                                         .addComponent(txtSate, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(txtEsJeruk, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(txtEsTeh, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                    .addComponent(btnHitung, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGap(48, 48, 48))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -216,11 +220,11 @@ public class FWarung extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton1)))
+                        .addComponent(btnHitung)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(lblCaraBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnKosong))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -284,21 +288,22 @@ public class FWarung extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup CaraBayar;
+    private javax.swing.JButton btnHitung;
+    private javax.swing.JButton btnKosong;
     private javax.swing.JCheckBox chkEsJeruk;
     private javax.swing.JCheckBox chkEsTeh;
     private javax.swing.JCheckBox chkSate;
     private javax.swing.JCheckBox chkSoto;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JLabel lblCaraBayar;
     private javax.swing.JTextField txtEsJeruk;
     private javax.swing.JTextField txtEsTeh;
     private javax.swing.JTextField txtSate;
