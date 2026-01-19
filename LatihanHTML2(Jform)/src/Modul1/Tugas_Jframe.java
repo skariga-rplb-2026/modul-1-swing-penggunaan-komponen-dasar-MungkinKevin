@@ -156,7 +156,7 @@ public class Tugas_Jframe extends javax.swing.JFrame {
         
         String asal = txtAsal.getText();
         txtTujuan.setText(asal);
-        
+        txtAsal.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
