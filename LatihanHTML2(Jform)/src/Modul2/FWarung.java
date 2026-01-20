@@ -5,6 +5,8 @@
  */
 package Modul2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author unbk
@@ -289,7 +291,20 @@ public class FWarung extends javax.swing.JFrame {
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
+        boolean IDataOke = true; //Mengecek status pesanan, apakah ada atau tdk
         
+        if (chkSate.isSelected() && txtSate.getText() == " ")
+            IDataOke = false;
+        if (chkEsJeruk.isSelected() && txtEsJeruk.getText() == " ")
+            IDataOke = false;
+        if (chkEsJeruk.isSelected() && txtEsJeruk.getText() == " ")
+            IDataOke = false;
+        if (chkEsJeruk.isSelected() && txtEsJeruk.getText() == " ")
+            IDataOke = false;
+        
+        if (IDataOke != true) {
+            JOptionPane.showMessageDialog(this, "Kesalahan");
+        }
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void chkSotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkSotoActionPerformed
