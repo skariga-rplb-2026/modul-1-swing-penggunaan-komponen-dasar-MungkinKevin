@@ -166,6 +166,11 @@ public class FWarung extends javax.swing.JFrame {
         jLabel5.setText("Total: Rp.o");
 
         btnKosong.setText("Kosongkan");
+        btnKosong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKosongActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -304,6 +309,8 @@ public class FWarung extends javax.swing.JFrame {
         
         if (IDataOke != true) {
             JOptionPane.showMessageDialog(this, "Kesalahan");
+        } else {
+            
         }
     }//GEN-LAST:event_btnHitungActionPerformed
 
@@ -332,6 +339,27 @@ public class FWarung extends javax.swing.JFrame {
             txtSate.setText("0");
         }
     }//GEN-LAST:event_chkSateActionPerformed
+
+    private void btnKosongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKosongActionPerformed
+        // TODO add your handling code here:
+        chkSoto.setSelected(false);
+        txtSoto.setEditable(false);
+        txtSoto.setEnabled(false);
+        txtSoto.setText("0");
+        chkSate.setSelected(false);
+        txtSate.setEditable(false);
+        txtSate.setEnabled(false);
+        txtSate.setText("0");
+        chkEsTeh.setSelected(false);
+        txtEsTeh.setEditable(false);
+        txtEsTeh.setEnabled(false);
+        txtEsTeh.setText("0");
+        chkEsJeruk.setSelected(false);
+        txtEsJeruk.setEditable(false);
+        txtEsJeruk.setEnabled(false);
+        txtEsJeruk.setText("0");
+        
+    }//GEN-LAST:event_btnKosongActionPerformed
 
     /**
      * @param args the command line arguments
