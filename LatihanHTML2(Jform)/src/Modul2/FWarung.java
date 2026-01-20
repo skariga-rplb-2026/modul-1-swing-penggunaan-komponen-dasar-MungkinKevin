@@ -37,9 +37,9 @@ public class FWarung extends javax.swing.JFrame {
         chkEsTeh = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        rdoCash = new javax.swing.JRadioButton();
+        rdoBCA = new javax.swing.JRadioButton();
+        rdoMandiri = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         txtSoto = new javax.swing.JTextField();
         txtSate = new javax.swing.JTextField();
@@ -85,22 +85,28 @@ public class FWarung extends javax.swing.JFrame {
 
         jLabel2.setText("Cara Bayar:");
 
-        CaraBayar.add(jRadioButton1);
-        jRadioButton1.setText("Cash");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        CaraBayar.add(rdoCash);
+        rdoCash.setSelected(true);
+        rdoCash.setText("Uang Cash");
+        rdoCash.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdoCashActionPerformed(evt);
             }
         });
 
-        CaraBayar.add(jRadioButton2);
-        jRadioButton2.setText("BCA Card");
-
-        CaraBayar.add(jRadioButton3);
-        jRadioButton3.setText("Mandiri Card");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        CaraBayar.add(rdoBCA);
+        rdoBCA.setText("BCA Card");
+        rdoBCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rdoBCAActionPerformed(evt);
+            }
+        });
+
+        CaraBayar.add(rdoMandiri);
+        rdoMandiri.setText("Mandiri Card");
+        rdoMandiri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdoMandiriActionPerformed(evt);
             }
         });
 
@@ -115,9 +121,9 @@ public class FWarung extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)))
+                    .addComponent(rdoCash)
+                    .addComponent(rdoBCA)
+                    .addComponent(rdoMandiri)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,11 +131,11 @@ public class FWarung extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(13, 13, 13)
-                .addComponent(jRadioButton1)
+                .addComponent(rdoCash)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(rdoBCA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(rdoMandiri)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -187,7 +193,7 @@ public class FWarung extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblCaraBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCaraBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnKosong))
                             .addGroup(layout.createSequentialGroup()
@@ -286,13 +292,19 @@ public class FWarung extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_chkEsTehActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rdoCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoCashActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+        if(rdoCash.isSelected()) {
+            lblCaraBayar.setText("Uang Cash");
+        }
+    }//GEN-LAST:event_rdoCashActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rdoMandiriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoMandiriActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+         if(rdoMandiri.isSelected()) {
+            lblCaraBayar.setText("Mandiri Card");
+        }
+    }//GEN-LAST:event_rdoMandiriActionPerformed
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
@@ -358,8 +370,16 @@ public class FWarung extends javax.swing.JFrame {
         txtEsJeruk.setEditable(false);
         txtEsJeruk.setEnabled(false);
         txtEsJeruk.setText("0");
-        
+        rdoCash.setSelected(true);
+        lblCaraBayar.setText("Uang Cash");
     }//GEN-LAST:event_btnKosongActionPerformed
+
+    private void rdoBCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoBCAActionPerformed
+        // TODO add your handling code here:
+         if(rdoBCA.isSelected()) {
+            lblCaraBayar.setText("BCA Card");
+        }
+    }//GEN-LAST:event_rdoBCAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -409,10 +429,10 @@ public class FWarung extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JLabel lblCaraBayar;
+    private javax.swing.JRadioButton rdoBCA;
+    private javax.swing.JRadioButton rdoCash;
+    private javax.swing.JRadioButton rdoMandiri;
     private javax.swing.JTextField txtEsJeruk;
     private javax.swing.JTextField txtEsTeh;
     private javax.swing.JTextField txtSate;
