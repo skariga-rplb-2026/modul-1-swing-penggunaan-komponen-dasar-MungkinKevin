@@ -61,6 +61,11 @@ public class FWarung extends javax.swing.JFrame {
         });
 
         chkSate.setText("Sate: Rp.1000");
+        chkSate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkSateActionPerformed(evt);
+            }
+        });
 
         chkEsJeruk.setText("Es Jeruk: Rp.2000");
         chkEsJeruk.addActionListener(new java.awt.event.ActionListener() {
@@ -250,10 +255,28 @@ public class FWarung extends javax.swing.JFrame {
 
     private void chkEsJerukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEsJerukActionPerformed
         // TODO add your handling code here:
+        if(chkEsJeruk.isSelected()) {
+            txtEsJeruk.setEditable(true);
+            txtEsJeruk.setEnabled(true);
+            txtEsJeruk.setText("1");
+        } else {
+            txtEsJeruk.setEditable(false);
+            txtEsJeruk.setEnabled(false);
+            txtEsJeruk.setText("0");
+        }
     }//GEN-LAST:event_chkEsJerukActionPerformed
 
     private void chkEsTehActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEsTehActionPerformed
         // TODO add your handling code here:
+        if(chkEsJeruk.isSelected()) {
+            txtEsTeh.setEditable(true);
+            txtEsTeh.setEnabled(true);
+            txtEsTeh.setText("1");
+        } else {
+            txtEsTeh.setEditable(false);
+            txtEsTeh.setEnabled(false);
+            txtEsTeh.setText("0");
+        }
     }//GEN-LAST:event_chkEsTehActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
@@ -266,15 +289,34 @@ public class FWarung extends javax.swing.JFrame {
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void chkSotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkSotoActionPerformed
         // TODO add your handling code here:
-        if(chkSoto.isSelected()) 
+        if(chkSoto.isSelected()) {
             txtSoto.setEditable(true);
             txtSoto.setEnabled(true);
-            txtSoto.setText
+            txtSoto.setText("1");
+        } else {
+            txtSoto.setEditable(false);
+            txtSoto.setEnabled(false);
+            txtSoto.setText("0");
+        }
     }//GEN-LAST:event_chkSotoActionPerformed
+
+    private void chkSateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkSateActionPerformed
+        // TODO add your handling code here:
+        if(chkSate.isSelected()) {
+            txtSate.setEditable(true);
+            txtSate.setEnabled(true);
+            txtSate.setText("1");
+        } else {
+            txtSate.setEditable(false);
+            txtSate.setEnabled(false);
+            txtSate.setText("0");
+        }
+    }//GEN-LAST:event_chkSateActionPerformed
 
     /**
      * @param args the command line arguments
