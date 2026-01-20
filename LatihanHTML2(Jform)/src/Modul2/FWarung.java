@@ -47,7 +47,7 @@ public class FWarung extends javax.swing.JFrame {
         txtEsTeh = new javax.swing.JTextField();
         btnHitung = new javax.swing.JButton();
         lblCaraBayar = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblTotal = new javax.swing.JLabel();
         btnKosong = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -168,8 +168,8 @@ public class FWarung extends javax.swing.JFrame {
         lblCaraBayar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCaraBayar.setText("Uang Cash");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Total: Rp.o");
+        lblTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTotal.setText("Total: Rp.o");
 
         btnKosong.setText("Kosongkan");
         btnKosong.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +218,7 @@ public class FWarung extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(251, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(76, 76, 76)))
         );
         layout.setVerticalGroup(
@@ -259,7 +259,7 @@ public class FWarung extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(262, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(68, 68, 68)))
         );
 
@@ -308,7 +308,7 @@ public class FWarung extends javax.swing.JFrame {
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
-        boolean IDataOke = true; //Mengecek status pesanan, apakah ada atau tdk
+        boolean IDataOke = true; 
         
         if (chkSate.isSelected() && txtSate.getText() == " ")
             IDataOke = false;
@@ -318,11 +318,28 @@ public class FWarung extends javax.swing.JFrame {
             IDataOke = false;
         if (chkEsJeruk.isSelected() && txtEsJeruk.getText() == " ")
             IDataOke = false;
+        //Mengecek status pesanan, apakah ada atau tdk
         
-        if (IDataOke != true) {
+        if (!IDataOke) {
             JOptionPane.showMessageDialog(this, "Kesalahan");
         } else {
+            //deklarasi
+            int nSoto = Integer.parseInt(txtSoto.getText());
+            int nSate = Integer.parseInt(txtSate.getText());
+            int nEsJeruk = Integer.parseInt(txtEsJeruk.getText());
+            int nEsTeh = Integer.parseInt(txtEsTeh.getText());
             
+            //rumus
+            int nTotal =(5000*nSoto) + (1000*nSate) + (2000*nEsJeruk) + (1500*nEsTeh);
+            lblTotal.setText("Rp. " + nTotal);
+            
+            //BAgian utk menampilkan cara bayar
+            if (rdoCash.isSelected())
+                lblCaraBayar.setText(rdoCash.getActionCommand());
+            if (rdoMandiri.isSelected())
+                lblCaraBayar.setText(rdoMandiri.getActionCommand());
+            if (rdoBCA.isSelected())
+                lblCaraBayar.setText(rdoBCA.getActionCommand());
         }
     }//GEN-LAST:event_btnHitungActionPerformed
 
@@ -372,6 +389,7 @@ public class FWarung extends javax.swing.JFrame {
         txtEsJeruk.setText("0");
         rdoCash.setSelected(true);
         lblCaraBayar.setText("Uang Cash");
+        lblTotal.setText("Rp. ");
     }//GEN-LAST:event_btnKosongActionPerformed
 
     private void rdoBCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoBCAActionPerformed
@@ -427,9 +445,9 @@ public class FWarung extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblCaraBayar;
+    private javax.swing.JLabel lblTotal;
     private javax.swing.JRadioButton rdoBCA;
     private javax.swing.JRadioButton rdoCash;
     private javax.swing.JRadioButton rdoMandiri;
