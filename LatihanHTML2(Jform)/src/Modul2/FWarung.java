@@ -157,6 +157,11 @@ public class FWarung extends javax.swing.JFrame {
         txtEsTeh.setEditable(false);
         txtEsTeh.setText("0");
         txtEsTeh.setEnabled(false);
+        txtEsTeh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEsTehActionPerformed(evt);
+            }
+        });
 
         btnHitung.setText("Hitung");
         btnHitung.addActionListener(new java.awt.event.ActionListener() {
@@ -281,7 +286,7 @@ public class FWarung extends javax.swing.JFrame {
 
     private void chkEsTehActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEsTehActionPerformed
         // TODO add your handling code here:
-        if(chkEsJeruk.isSelected()) {
+        if(chkEsTeh.isSelected()) {
             txtEsTeh.setEditable(true);
             txtEsTeh.setEnabled(true);
             txtEsTeh.setText("1");
@@ -398,6 +403,10 @@ public class FWarung extends javax.swing.JFrame {
             lblCaraBayar.setText("BCA Card");
         }
     }//GEN-LAST:event_rdoBCAActionPerformed
+
+    private void txtEsTehActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEsTehActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEsTehActionPerformed
 
     /**
      * @param args the command line arguments
