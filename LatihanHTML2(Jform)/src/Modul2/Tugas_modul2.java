@@ -215,11 +215,11 @@ public class Tugas_modul2 extends javax.swing.JFrame {
         } else {
             jmlhanak = 0;
         }
-        if (jmlhanak >= 0 && jmlhanak <= 3) {
-            if (jmlhanak == 3) {
+        if (jmlhanak >= 0) {
+            if (jmlhanak >= 3) {
             double gajiTotal = gajiPokok + (gajiPokok * 10/100 * 3);
             txtgajit.setText(Double.toString(gajiTotal));
-            } else {
+            } else  {
             double gajiTotal = gajiPokok + (gajiPokok * 10/100 * jmlhanak);
             txtgajit.setText(Double.toString(gajiTotal));
             }
