@@ -120,8 +120,7 @@ public class Latihan_FDaftar2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         String kuliah = lstMK.getSelectedValue();
         pilih.addElement(lstMK.getSelectedValue());
-        int index = lstMK.getSelectedIndex();
-        remove(lstMK.getSelectedIndex());
+        
     }//GEN-LAST:event_btnPilihActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
