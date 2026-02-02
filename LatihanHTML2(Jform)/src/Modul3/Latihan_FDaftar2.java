@@ -65,6 +65,11 @@ public class Latihan_FDaftar2 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Mata Kuliah Yang Dipilih");
 
+        lstPilih.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                lstPilihValueChanged(evt);
+            }
+        });
         jScrollPane2.setViewportView(lstPilih);
 
         btnHapus.setText("Hapus");
@@ -128,6 +133,10 @@ public class Latihan_FDaftar2 extends javax.swing.JFrame {
         pilih.remove(lstPilih.getSelectedIndex());
         
     }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void lstPilihValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstPilihValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstPilihValueChanged
 
     /**
      * @param args the command line arguments
