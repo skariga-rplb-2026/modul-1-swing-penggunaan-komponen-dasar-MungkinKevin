@@ -73,6 +73,11 @@ public class FDaftar extends javax.swing.JFrame {
         });
 
         txtKuliah.setEditable(false);
+        txtKuliah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKuliahActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Banyak Mata Kuliah Terpilih");
 
@@ -266,6 +271,10 @@ public class FDaftar extends javax.swing.JFrame {
     private void cboAngkatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboAngkatanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cboAngkatanActionPerformed
+
+    private void txtKuliahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKuliahActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtKuliahActionPerformed
 
     /**
      * @param args the command line arguments
