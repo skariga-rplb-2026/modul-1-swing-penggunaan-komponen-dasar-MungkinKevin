@@ -245,9 +245,12 @@ public class FDaftar extends javax.swing.JFrame {
         //hitung biaya
         int  nPerMK = 0;
         switch (i) {
-            case 0:nPerMK = 100000;break;
-            case 1:nPerMK = 90000;break;
-            case 2:nPerMK = 75000;break;
+            case 0:nPerMK = 100000;
+            break;
+            case 1:nPerMK = 90000;
+            break;
+            case 2:nPerMK = 75000;
+            break;
             default:nPerMK = 50000;
         }
         int nBiaya = nPilih * nPerMK;
