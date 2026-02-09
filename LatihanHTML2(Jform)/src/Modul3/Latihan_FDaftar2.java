@@ -21,8 +21,14 @@ public class Latihan_FDaftar2 extends javax.swing.JFrame {
      */
     public Latihan_FDaftar2() {
         initComponents();
-        pilih = new DefaultListModel();
-        lstPilih.setModel(pilih);
+        DefaultListModel model = new DefaultListModel();
+        model.addElement("Java Dektop");
+        model.addElement("Pemrograman Web");
+        model.addElement("Bahasa Inggris");
+        model.addElement("Logika dan Algoritma");
+        model.addElement("Organisasi Komputer");
+        lstMK.setModel(model);
+        lstPilih.setModel(new DefaultListModel());
     }
 
     /**
@@ -123,14 +129,29 @@ public class Latihan_FDaftar2 extends javax.swing.JFrame {
 
     private void btnPilihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPilihActionPerformed
         // TODO add your handling code here:
-        String kuliah = lstMK.getSelectedValue();
-        pilih.addElement(lstMK.getSelectedValue());
+        DefaultListModel modelKuliah = (DefaultListModel)lstMK.getModel();
+        DefaultListModel modelPilih = (DefaultListModel)lstPilih.getModel();
+        
+        int index = lstMK.getSelectedIndex();
+        
+        Object data = modelKuliah.getElementAt(index);
+        
+        modelPilih.addElement(data);
+        modelKuliah.remove(index);
+        
     }//GEN-LAST:event_btnPilihActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
-        pilih.remove(lstPilih.getSelectedIndex());
+        DefaultListModel modelKuliah = (DefaultListModel)lstMK.getModel();
+        DefaultListModel modelPilih = (DefaultListModel)lstPilih.getModel();
         
+        int index = lstPilih.getSelectedIndex();
+        
+        Object data = modelPilih.getElementAt(index);
+        
+        modelKuliah.addElement(data);
+        modelPilih.remove(index);
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void lstPilihValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstPilihValueChanged

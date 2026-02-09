@@ -207,6 +207,7 @@ public class FDialog extends javax.swing.JFrame {
 
     private void btnYNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYNActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnYNActionPerformed
 
     private void btnYNCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnYNCActionPerformed
